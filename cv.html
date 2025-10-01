@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alex Johnson - Software Developer with 5+ years of experience in full-stack development, JavaScript, Python, React, Node.js">
+    <meta name="keywords" content="Software Developer, Full Stack Developer, JavaScript, Python, React, Node.js, Web Development">
+    <title>Alex Johnson - Software Developer | Full Stack Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f6fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Section */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 50px;
+            border-bottom: 4px solid #3498db;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .header-left h1 {
+            font-size: 2.5em;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .job-title {
+            font-size: 1.3em;
+            color: #3498db;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            font-size: 0.95em;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item strong {
+            min-width: 70px;
+            color: #3498db;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 50px;
+        }
+
+        section {
+            margin-bottom: 45px;
+            page-break-inside: avoid;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.6em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #3498db;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Professional Summary */
+        .summary-text {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #34495e;
+            text-align: justify;
+        }
+
+        /* Core Competencies */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .competency-item {
+            padding: 12px 15px;
+            background: #ecf0f1;
+            border-left: 3px solid #3498db;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 0.95em;
+        }
+
+        /* Technical Skills */
+        .skills-section {
+            display: grid;
+            gap: 20px;
+        }
+
+        .skill-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .skill-row:last-child {
+            border-bottom: none;
+        }
+
+        .skill-label {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 1.05em;
+        }
+
+        .skill-list {
+            color: #34495e;
+            font-size: 1em;
+            line-height: 1.7;
+        }
+
+        /* Experience Section */
+        .experience-entry {
+            margin-bottom: 35px;
+            page-break-inside: avoid;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .entry-title {
+            font-size: 1.25em;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .entry-company {
+            font-size: 1.1em;
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .entry-date {
+            color: #7f8c8d;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        .entry-location {
+            color: #7f8c8d;
+            font-size: 0.95em;
+            margin-bottom: 12px;
+        }
+
+        .entry-description ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .entry-description li {
+            margin-bottom: 10px;
+            color: #34495e;
+            line-height: 1.7;
+        }
+
+        .entry-description li strong {
+            color: #2c3e50;
+        }
+
+        /* Projects Section */
+        .project-entry {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+
+        .project-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .project-tech {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .project-description {
+            color: #34495e;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 12px;
+        }
+
+        .project-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Education Section */
+        .education-entry {
+            margin-bottom: 25px;
+        }
+
+        .degree-title {
+            font-size: 1.15em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .institution {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .education-details {
+            color: #7f8c8d;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+
+        .education-description {
+            color: #34495e;
+            line-height: 1.7;
+            margin-top: 8px;
+        }
+
+        /* Certifications */
+        .cert-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .cert-item {
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 3px solid #3498db;
+        }
+
+        .cert-title {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+
+        .cert-issuer {
+            color: #3498db;
+            font-size: 0.95em;
+            font-weight: 600;
+        }
+
+        .cert-date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 3px;
+        }
+
+        /* Additional Sections */
+        .achievements-list {
+            margin-left: 20px;
+        }
+
+        .achievements-list li {
+            margin-bottom: 10px;
+            color: #34495e;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: #ecf0f1;
+            padding: 25px 50px;
+            text-align: center;
+            border-top: 3px solid #3498db;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        .footer-link:hover {
+            color: #3498db;
+        }
+
+        .footer-text {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        /* Print Styles for ATS */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            header {
+                background: white;
+                color: black;
+                border-bottom: 2px solid black;
+            }
+
+            .job-title {
+                color: black;
+            }
+
+            .contact-item strong {
+                color: black;
+            }
+
+            .contact-item a {
+                color: black;
+            }
+
+            h2 {
+                color: black;
+                border-bottom: 2px solid black;
+            }
+
+            .project-entry {
+                background: white;
+                border-left: 2px solid black;
+            }
+
+            .cert-item {
+                background: white;
+                border-left: 2px solid black;
+            }
+
+            footer {
+                background: white;
+                border-top: 2px solid black;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+
+            header, main, footer {
+                padding: 30px 25px;
+            }
+
+            .header-content {
+                flex-direction: column;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .competencies-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-row {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .entry-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            h1 {
+                font-size: 2em !important;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Contact Information -->
+        <header>
+            <div class="header-content">
+                <div class="header-left">
+                    <h1>Alex Johnson</h1>
+                    <div class="job-title">Senior Software Developer | Full Stack Engineer</div>
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <a href="mailto:alex.johnson@email.com">alex.johnson@email.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone:</strong>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Location:</strong>
+                            <span>San Francisco, CA</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>LinkedIn:</strong>
+                            <a href="https://linkedin.com/in/alexjohnson">linkedin.com/in/alexjohnson</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>GitHub:</strong>
+                            <a href="https://github.com/alexjohnson">github.com/alexjohnson</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Portfolio:</strong>
+                            <a href="https://alexjohnson.dev">alexjohnson.dev</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Professional Summary -->
+            <section id="summary">
+                <h2>Professional Summary</h2>
+                <p class="summary-text">
+                    Results-driven Software Developer with 5+ years of experience designing, developing, and deploying scalable web applications and enterprise solutions. Proven expertise in full-stack development with strong proficiency in JavaScript, Python, React, and Node.js. Demonstrated ability to lead cross-functional teams, optimize application performance by up to 60%, and deliver high-quality software solutions that drive business growth. Adept at problem-solving, code optimization, and implementing best practices in agile environments. Strong communicator with a track record of mentoring junior developers and collaborating effectively with stakeholders to translate business requirements into technical solutions.
+                </p>
+            </section>
+
+            <!-- Core Competencies -->
+            <section id="competencies">
+                <h2>Core Competencies</h2>
+                <div class="competencies-grid">
+                    <div class="competency-item">Full-Stack Development</div>
+                    <div class="competency-item">Microservices Architecture</div>
+                    <div class="competency-item">API Design & Development</div>
+                    <div class="competency-item">Database Management</div>
+                    <div class="competency-item">Cloud Infrastructure (AWS)</div>
+                    <div class="competency-item">DevOps & CI/CD</div>
+                    <div class="competency-item">Agile/Scrum Methodology</div>
+                    <div class="competency-item">Performance Optimization</div>
+                    <div class="competency-item">Team Leadership & Mentoring</div>
+                </div>
+            </section>
+
+            <!-- Technical Skills -->
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-section">
+                    <div class="skill-row">
+                        <div class="skill-label">Programming Languages:</div>
+                        <div class="skill-list">JavaScript (ES6+), TypeScript, Python, Java, SQL, HTML5, CSS3</div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-label">Frontend Technologies:</div>
+                        <div class="skill-list">React.js, Vue.js, Next.js, Redux, React Hooks, Tailwind CSS, Material-UI, Responsive Design, SPA Development</div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-label">Backend Technologies:</div>
+                        <div class="skill-list">Node.js, Express.js, Django, FastAPI, RESTful APIs, GraphQL, Microservices, WebSockets, Socket.io</div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-label">Databases:</div>
+                        <div class="skill-list">PostgreSQL, MongoDB, MySQL, Redis, Database Design, Query Optimization, ORMs (Sequelize, Mongoose)</div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-label">Cloud & DevOps:</div>
+                        <div class="skill-list">AWS (EC2, S3, Lambda, RDS), Docker, Kubernetes, CI/CD (GitHub Actions, Jenkins), Nginx, Linux</div>
+                    </div>
+                    <div class="skill-row">
+                        <div class="skill-label">Tools & Methodologies:</div>
+                        <div class="skill-list">Git/GitHub, Jira, Agile/Scrum, TDD, Unit Testing (Jest, Pytest), Code Review, System Design</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Experience -->
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-entry">
+                    <div class="entry-title">Senior Software Engineer</div>
+                    <div class="entry-company">TechCorp Solutions</div>
+                    <div class="entry-header">
+                        <div class="entry-location">San Francisco, CA</div>
+                        <div class="entry-date">January 2022 - Present</div>
+                    </div>
+                    <div class="entry-description">
+                        <ul>
+                            <li>Architected and developed <strong>microservices-based platform</strong> serving 500,000+ daily active users, improving system reliability by 40% and reducing downtime to less than 0.1%</li>
+                            <li>Led development of <strong>real-time data processing pipeline</strong> using Node.js, Redis, and WebSockets, reducing data latency from 5 seconds to 2 seconds (60% improvement)</li>
+                            <li>Spearheaded migration from monolithic architecture to microservices, resulting in <strong>35% improvement in deployment speed</strong> and enhanced scalability</li>
+                            <li>Mentored and conducted code reviews for team of 5 junior developers, establishing coding standards and best practices that reduced bug rates by 30%</li>
+                            <li>Collaborated with product management and UX teams to deliver feature-rich user interfaces using <strong>React, TypeScript, and Redux</strong>, increasing user engagement by 25%</li>
+                            <li>Implemented comprehensive unit and integration testing strategies using Jest and Cypress, achieving 85% code coverage</li>
+                            <li>Optimized database queries and implemented caching mechanisms, reducing API response times by 45%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-entry">
+                    <div class="entry-title">Full Stack Developer</div>
+                    <div class="entry-company">StartupHub Inc.</div>
+                    <div class="entry-header">
+                        <div class="entry-location">San Francisco, CA</div>
+                        <div class="entry-date">June 2020 - December 2021</div>
+                    </div>
+                    <div class="entry-description">
+                        <ul>
+                            <li>Developed and deployed <strong>10+ responsive web applications</strong> using React, Node.js, Express, and PostgreSQL for diverse client projects across healthcare, fintech, and e-commerce sectors</li>
+                            <li>Designed and implemented <strong>RESTful APIs</strong> consumed by mobile and web applications, handling 100,000+ daily requests with 99.9% uptime</li>
+                            <li>Integrated third-party services including <strong>Stripe payment processing, SendGrid email automation, and Twilio SMS notifications</strong>, enhancing application functionality</li>
+                            <li>Established <strong>CI/CD pipelines</strong> using GitHub Actions and Docker, reducing deployment time from 2 hours to 20 minutes (83% improvement)</li>
+                            <li>Optimized frontend performance through code splitting, lazy loading, and image optimization, improving page load times by 50%</li>
+                            <li>Implemented comprehensive error logging and monitoring using Sentry, reducing mean time to resolution (MTTR) by 40%</li>
+                            <li>Participated in agile ceremonies including sprint planning, daily standups, and retrospectives, consistently delivering features on schedule</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-entry">
+                    <div class="entry-title">Junior Software Developer</div>
+                    <div class="entry-company">Digital Solutions Ltd.</div>
+                    <div class="entry-header">
+                        <div class="entry-location">San Francisco, CA</div>
+                        <div class="entry-date">August 2019 - May 2020</div>
+                    </div>
+                    <div class="entry-description">
+                        <ul>
+                            <li>Developed and maintained web applications using <strong>Django, Vue.js, and PostgreSQL</strong> for internal business operations and client-facing portals</li>
+                            <li>Resolved 150+ bug reports and implemented new features based on user feedback, improving overall application stability</li>
+                            <li>Wrote unit tests using pytest and achieved 75% test coverage, ensuring code reliability and maintainability</li>
+                            <li>Collaborated with senior developers in code reviews, learning best practices in software architecture and design patterns</li>
+                            <li>Created comprehensive technical documentation for APIs and system workflows, facilitating knowledge transfer and onboarding</li>
+                            <li>Participated in database schema design and optimization, improving query performance by 30%</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Projects -->
+            <section id="projects">
+                <h2>Key Projects</h2>
+                
+                <div class="project-entry">
+                    <div class="project-title">Enterprise E-Commerce Platform</div>
+                    <div class="project-tech">Technologies: React, TypeScript, Node.js, Express, MongoDB, Redis, Stripe API, AWS S3</div>
+                    <div class="project-description">
+                        Architected and developed a comprehensive e-commerce platform featuring user authentication, product catalog with advanced search and filtering, shopping cart with persistent state, secure payment processing, and admin dashboard. Implemented real-time inventory management system and order tracking functionality. Platform handles 10,000+ concurrent users with 99.9% uptime and processes $500K+ in monthly transactions.
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">→ Live Demo</a>
+                        <a href="#" class="project-link">→ GitHub Repository</a>
+                    </div>
+                </div>
+
+                <div class="project-entry">
+                    <div class="project-title">Real-Time Collaborative Task Management System</div>
+                    <div class="project-tech">Technologies: Next.js, TypeScript, PostgreSQL, Prisma, Socket.io, Docker, AWS EC2</div>
+                    <div class="project-description">
+                        Built a collaborative project management application with real-time synchronization, drag-and-drop kanban boards, team collaboration features, time tracking, and analytics dashboard. Implemented WebSocket connections for instant updates across multiple clients. System supports 500+ concurrent users and manages 50,000+ tasks across 100+ organizations with sub-second update latency.
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">→ Live Demo</a>
+                        <a href="#" class="project-link">→ GitHub Repository</a>
+                    </div>
+                </div>
+
+                <div class="project-entry">
+                    <div class="project-title">Data Visualization Dashboard</div>
+                    <div class="project-tech">Technologies: React, D3.js, Chart.js, Python, FastAPI, PostgreSQL</div>
+                    <div class="project-description">
+                        Developed an interactive analytics dashboard for visualizing complex datasets with real-time updates. Features include customizable charts, data filtering, export functionality, and responsive design. Implemented efficient data aggregation on backend to handle datasets with 1M+ records. Dashboard serves 5,000+ daily users and displays insights from 10+ data sources.
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">→ Live Demo</a>
+                        <a href="#" class="project-link">→ GitHub Repository</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section id="education">
+                <h2>Education</h2>
+                
+                <div class="education-entry">
+                    <div class="degree-title">Bachelor of Science in Computer Science</div>
+                    <div class="institution">University of Technology, San Francisco, CA</div>
+                    <div class="education-details">Graduated: May 2019 | GPA: 3.8/4.0 | Honors Graduate</div>
+                    <div class="education-description">
+                        <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Database Management Systems, Software Engineering, Web Development, Operating Systems, Computer Networks, Object-Oriented Programming, Artificial Intelligence, Cloud Computing
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications -->
+            <section id="certifications">
+                <h2>Professional Certifications</h2>
+                <div class="cert-list">
+                    <div class="cert-item">
+                        <div class="cert-title">AWS Certified Developer - Associate</div>
+                        <div class="cert-issuer">Amazon Web Services (AWS)</div>
+                        <div class="cert-date">Issued: March 2023 | Valid through: March 2026</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-title">MongoDB Certified Developer Associate</div>
+                        <div class="cert-issuer">MongoDB University</div>
+                        <div class="cert-date">Issued: July 2022</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-title">Professional Scrum Master I (PSM I)</div>
+                        <div class="cert-issuer">Scrum.org</div>
+                        <div class="cert-date">Issued: November 2021</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Information -->
+            <section id="additional">
+                <h2>Additional Information</h2>
+                <ul class="achievements-list">
+                    <li><strong>Open Source Contributions:</strong> Active contributor to React and Node.js community projects with 500+ GitHub stars across repositories</li>
+                    <li><strong>Technical Writing:</strong> Published 15+ technical articles on Medium and Dev.to covering JavaScript, React patterns, and system design, reaching 50,000+ readers</li>
+                    <li><strong>Languages:</strong> English (Native), Spanish (Conversational)</li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-links">
+                <a href="mailto:alex.johnson@email.com" class="footer-link">Email</a>
+                <a href="https://linkedin.com/in/alexjohnson" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/alexjohnson" class="footer-link">GitHub</a>
+                <a href="https://alexjohnson.dev" class="footer-link">Portfolio</a>
+            </div>
+            <p class="footer-text">© 2025 Alex Johnson. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
