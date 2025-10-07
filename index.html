@@ -1,724 +1,327 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Alex Johnson - Software Developer with 5+ years of experience in full-stack development, JavaScript, Python, React, Node.js">
-    <meta name="keywords" content="Software Developer, Full Stack Developer, JavaScript, Python, React, Node.js, Web Development">
-    <title>Alex Johnson - Software Developer | Full Stack Engineer</title>
+    <title>Ahmad Abd El-Azeem | AI Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Arial', 'Helvetica', sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background: #f5f6fa;
-            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Lighter gray background */
+            color: #1a202c;
         }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden; /* To keep image corners rounded */
         }
-
-        /* Header Section */
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 40px 50px;
-            border-bottom: 4px solid #3498db;
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
         }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 30px;
-            flex-wrap: wrap;
+        .tag {
+            background-color: #e0f2fe; /* Lighter blue */
+            color: #0c4a6e; /* Darker blue text */
+            padding: 0.375rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-
-        .header-left h1 {
-            font-size: 2.5em;
-            margin-bottom: 8px;
+        .tag:hover {
+            background-color: #0ea5e9; /* Sky blue */
+            color: #ffffff;
+        }
+        .section-title {
+            font-size: 2.5rem;
             font-weight: 700;
+            margin-bottom: 3rem;
+            color: #1e293b;
+            text-align: center;
         }
-
-        .job-title {
-            font-size: 1.3em;
-            color: #3498db;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            font-size: 0.95em;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .contact-item strong {
-            min-width: 70px;
-            color: #3498db;
-        }
-
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* Main Content */
-        main {
-            padding: 40px 50px;
-        }
-
-        section {
-            margin-bottom: 45px;
-            page-break-inside: avoid;
-        }
-
-        h2 {
-            color: #2c3e50;
-            font-size: 1.6em;
-            font-weight: 700;
-            margin-bottom: 20px;
-            padding-bottom: 8px;
-            border-bottom: 3px solid #3498db;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Professional Summary */
-        .summary-text {
-            font-size: 1.05em;
-            line-height: 1.8;
-            color: #34495e;
-            text-align: justify;
-        }
-
-        /* Core Competencies */
-        .competencies-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .competency-item {
-            padding: 12px 15px;
-            background: #ecf0f1;
-            border-left: 3px solid #3498db;
-            font-weight: 600;
-            color: #2c3e50;
-            font-size: 0.95em;
-        }
-
-        /* Technical Skills */
-        .skills-section {
-            display: grid;
-            gap: 20px;
-        }
-
-        .skill-row {
-            display: grid;
-            grid-template-columns: 180px 1fr;
-            gap: 20px;
-            padding: 15px 0;
-            border-bottom: 1px solid #ecf0f1;
-        }
-
-        .skill-row:last-child {
-            border-bottom: none;
-        }
-
-        .skill-label {
-            font-weight: 700;
-            color: #2c3e50;
-            font-size: 1.05em;
-        }
-
-        .skill-list {
-            color: #34495e;
-            font-size: 1em;
-            line-height: 1.7;
-        }
-
-        /* Experience Section */
-        .experience-entry {
-            margin-bottom: 35px;
-            page-break-inside: avoid;
-        }
-
-        .entry-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 8px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .entry-title {
-            font-size: 1.25em;
-            font-weight: 700;
-            color: #2c3e50;
-        }
-
-        .entry-company {
-            font-size: 1.1em;
-            color: #3498db;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .entry-date {
-            color: #7f8c8d;
-            font-weight: 600;
-            font-size: 0.95em;
-        }
-
-        .entry-location {
-            color: #7f8c8d;
-            font-size: 0.95em;
-            margin-bottom: 12px;
-        }
-
-        .entry-description ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-
-        .entry-description li {
-            margin-bottom: 10px;
-            color: #34495e;
-            line-height: 1.7;
-        }
-
-        .entry-description li strong {
-            color: #2c3e50;
-        }
-
-        /* Projects Section */
-        .project-entry {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
-        }
-
-        .project-title {
-            font-size: 1.2em;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 8px;
-        }
-
-        .project-tech {
-            color: #3498db;
-            font-weight: 600;
-            margin-bottom: 10px;
-            font-size: 0.95em;
-        }
-
-        .project-description {
-            color: #34495e;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 12px;
-        }
-
-        .project-link {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95em;
+        .btn {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
-        }
-
-        .project-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Education Section */
-        .education-entry {
-            margin-bottom: 25px;
-        }
-
-        .degree-title {
-            font-size: 1.15em;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-
-        .institution {
-            color: #3498db;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .education-details {
-            color: #7f8c8d;
-            font-size: 0.95em;
-            margin-bottom: 8px;
-        }
-
-        .education-description {
-            color: #34495e;
-            line-height: 1.7;
-            margin-top: 8px;
-        }
-
-        /* Certifications */
-        .cert-list {
-            display: grid;
-            gap: 12px;
-        }
-
-        .cert-item {
-            padding: 15px;
-            background: #f8f9fa;
-            border-left: 3px solid #3498db;
-        }
-
-        .cert-title {
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 3px;
-        }
-
-        .cert-issuer {
-            color: #3498db;
-            font-size: 0.95em;
-            font-weight: 600;
-        }
-
-        .cert-date {
-            color: #7f8c8d;
-            font-size: 0.9em;
-            margin-top: 3px;
-        }
-
-        /* Additional Sections */
-        .achievements-list {
-            margin-left: 20px;
-        }
-
-        .achievements-list li {
-            margin-bottom: 10px;
-            color: #34495e;
-            line-height: 1.7;
-        }
-
-        /* Footer */
-        footer {
-            background: #ecf0f1;
-            padding: 25px 50px;
-            text-align: center;
-            border-top: 3px solid #3498db;
-        }
-
-        .footer-links {
-            display: flex;
             justify-content: center;
-            gap: 25px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-
-        .footer-link {
-            color: #2c3e50;
-            text-decoration: none;
+            padding: 0.625rem 1.25rem;
+            border-radius: 0.5rem;
             font-weight: 600;
-            font-size: 0.95em;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
         }
-
-        .footer-link:hover {
-            color: #3498db;
+        .btn-primary {
+            background-color: #0ea5e9;
+            color: white;
         }
-
-        .footer-text {
-            color: #7f8c8d;
-            font-size: 0.9em;
+        .btn-primary:hover {
+            background-color: #0284c7;
         }
-
-        /* Print Styles for ATS */
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-
-            .container {
-                box-shadow: none;
-                max-width: 100%;
-            }
-
-            header {
-                background: white;
-                color: black;
-                border-bottom: 2px solid black;
-            }
-
-            .job-title {
-                color: black;
-            }
-
-            .contact-item strong {
-                color: black;
-            }
-
-            .contact-item a {
-                color: black;
-            }
-
-            h2 {
-                color: black;
-                border-bottom: 2px solid black;
-            }
-
-            .project-entry {
-                background: white;
-                border-left: 2px solid black;
-            }
-
-            .cert-item {
-                background: white;
-                border-left: 2px solid black;
-            }
-
-            footer {
-                background: white;
-                border-top: 2px solid black;
-            }
-
-            section {
-                page-break-inside: avoid;
-            }
+        .btn-secondary {
+            background-color: #f1f5f9;
+            color: #334155;
+            border-color: #cbd5e1;
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                padding: 0;
-            }
-
-            header, main, footer {
-                padding: 30px 25px;
-            }
-
-            .header-content {
-                flex-direction: column;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .competencies-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .skill-row {
-                grid-template-columns: 1fr;
-                gap: 8px;
-            }
-
-            .entry-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            h1 {
-                font-size: 2em !important;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
+        .btn-secondary:hover {
+            background-color: #e2e8f0;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
+        }
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            background-color: #fefefe;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            animation: slideIn 0.4s ease-out;
+        }
+        @keyframes slideIn {
+            from {transform: translateY(-50px); opacity: 0}
+            to {transform: translateY(0); opacity: 1}
+        }
+        @keyframes fadeIn {
+            from {opacity: 0} 
+            to {opacity: 1}
+        }
+        /* Animation for scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <!-- Header with Contact Information -->
-        <header>
-            <div class="header-content">
-                <div class="header-left">
-                    <h1>Ahmed Abd El-Azeem</h1>
-                    <div class="job-title">AI Engineer</div>
-                    <div class="contact-grid">
-                        <div class="contact-item">
-                            <strong>Email:</strong>
-                            <a href="mailto:alex.johnson@email.com">azeem95ha_ms1@outlook.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Phone:</strong>
-                            <span>01069234448 | 01550018724</span>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Location:</strong>
-                            <span>Egypt, Cairo</span>
-                        </div>
-                        <div class="contact-item">
-                            <strong>LinkedIn:</strong>
-                            <a href="www.linkedin.com/in/ahmad-abd-el-azeem95">linkedin.com/in/ahmad-abd-el-azeem95</a>
-                        </div>
-                        <div class="contact-item">
-                            <strong>GitHub:</strong>
-                            <a href="https://github.com/alexjohnson">github.com/alexjohnson</a>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Portfolio:</strong>
-                            <a href="https://alexjohnson.dev">alexjohnson.dev</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+<body class="antialiased">
 
-        <main>
-            <!-- Professional Summary -->
-            <section id="summary">
-                <h2>Professional Summary</h2>
-                <p class="summary-text">
-                    Results-driven Software Developer with 5+ years of experience designing, developing, and deploying scalable web applications and enterprise solutions. Proven expertise in full-stack development with strong proficiency in JavaScript, Python, React, and Node.js. Demonstrated ability to lead cross-functional teams, optimize application performance by up to 60%, and deliver high-quality software solutions that drive business growth. Adept at problem-solving, code optimization, and implementing best practices in agile environments. Strong communicator with a track record of mentoring junior developers and collaborating effectively with stakeholders to translate business requirements into technical solutions.
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-800">Ahmad Abd El-Azeem</a>
+            <nav class="hidden md:flex space-x-8 text-gray-600 font-medium">
+                <a href="#profile" class="hover:text-sky-500 transition-colors">Profile</a>
+                <a href="#skills" class="hover:text-sky-500 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-sky-500 transition-colors">Projects</a>
+                <a href="#education" class="hover:text-sky-500 transition-colors">Education</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 md:py-32 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">Ahmad Abd El-Azeem</h1>
+            <p class="mt-4 text-xl md:text-2xl font-medium text-sky-600">AI Engineer</p>
+            <div class="mt-8 flex justify-center items-center flex-wrap gap-x-6 gap-y-3 text-gray-500">
+                <a href="mailto:azeem95ha_ms1@outlook.com" class="hover:text-sky-600 transition duration-300 flex items-center">
+                    <i class="fas fa-envelope mr-2"></i>azeem95ha_ms1@outlook.com
+                </a>
+                <span class="text-gray-300 hidden sm:inline">|</span>
+                <span class="flex items-center"><i class="fas fa-phone-alt mr-2"></i>01069234448 / 01550018724</span>
+                <span class="text-gray-300 hidden sm:inline">|</span>
+                <span class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i>Hadayek-EL-Koba, Cairo, Egypt</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        
+        <!-- Profile Section -->
+        <section id="profile" class="mb-24 fade-in-section">
+             <div class="max-w-3xl mx-auto text-center">
+                <h2 class="section-title">Profile</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Enthusiastic and results-oriented AI Engineer with a strong foundation in Artificial Intelligence and Machine Learning. Possessing hands-on experience gained through self-learning and real-world application MVPs. Experienced in Python, Data Analysis, Data Engineering, LLMs development, and more. Eager to apply theoretical knowledge and practical skills in a dynamic AI engineering role to build innovative and valuable solutions.
                 </p>
-            </section>
-
-            <!-- Core Competencies -->
-            <section id="competencies">
-                <h2>Core Competencies</h2>
-                <div class="competencies-grid">
-                    <div class="competency-item">Full-Stack Development</div>
-                    <div class="competency-item">Microservices Architecture</div>
-                    <div class="competency-item">API Design & Development</div>
-                    <div class="competency-item">Database Management</div>
-                    <div class="competency-item">Cloud Infrastructure (AWS)</div>
-                    <div class="competency-item">DevOps & CI/CD</div>
-                    <div class="competency-item">Agile/Scrum Methodology</div>
-                    <div class="competency-item">Performance Optimization</div>
-                    <div class="competency-item">Team Leadership & Mentoring</div>
-                </div>
-            </section>
-
-            <!-- Technical Skills -->
-            <section id="skills">
-                <h2>Technical Skills</h2>
-                <div class="skills-section">
-                    <div class="skill-row">
-                        <div class="skill-label">Programming Languages:</div>
-                        <div class="skill-list">JavaScript (ES6+), TypeScript, Python, Java, SQL, HTML5, CSS3</div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-label">Frontend Technologies:</div>
-                        <div class="skill-list">React.js, Vue.js, Next.js, Redux, React Hooks, Tailwind CSS, Material-UI, Responsive Design, SPA Development</div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-label">Backend Technologies:</div>
-                        <div class="skill-list">Node.js, Express.js, Django, FastAPI, RESTful APIs, GraphQL, Microservices, WebSockets, Socket.io</div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-label">Databases:</div>
-                        <div class="skill-list">PostgreSQL, MongoDB, MySQL, Redis, Database Design, Query Optimization, ORMs (Sequelize, Mongoose)</div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-label">Cloud & DevOps:</div>
-                        <div class="skill-list">AWS (EC2, S3, Lambda, RDS), Docker, Kubernetes, CI/CD (GitHub Actions, Jenkins), Nginx, Linux</div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-label">Tools & Methodologies:</div>
-                        <div class="skill-list">Git/GitHub, Jira, Agile/Scrum, TDD, Unit Testing (Jest, Pytest), Code Review, System Design</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Professional Experience -->
-            <section id="experience">
-                <h2>Professional Experience</h2>
-                
-                <div class="experience-entry">
-                    <div class="entry-title">Senior Software Engineer</div>
-                    <div class="entry-company">TechCorp Solutions</div>
-                    <div class="entry-header">
-                        <div class="entry-location">San Francisco, CA</div>
-                        <div class="entry-date">January 2022 - Present</div>
-                    </div>
-                    <div class="entry-description">
-                        <ul>
-                            <li>Architected and developed <strong>microservices-based platform</strong> serving 500,000+ daily active users, improving system reliability by 40% and reducing downtime to less than 0.1%</li>
-                            <li>Led development of <strong>real-time data processing pipeline</strong> using Node.js, Redis, and WebSockets, reducing data latency from 5 seconds to 2 seconds (60% improvement)</li>
-                            <li>Spearheaded migration from monolithic architecture to microservices, resulting in <strong>35% improvement in deployment speed</strong> and enhanced scalability</li>
-                            <li>Mentored and conducted code reviews for team of 5 junior developers, establishing coding standards and best practices that reduced bug rates by 30%</li>
-                            <li>Collaborated with product management and UX teams to deliver feature-rich user interfaces using <strong>React, TypeScript, and Redux</strong>, increasing user engagement by 25%</li>
-                            <li>Implemented comprehensive unit and integration testing strategies using Jest and Cypress, achieving 85% code coverage</li>
-                            <li>Optimized database queries and implemented caching mechanisms, reducing API response times by 45%</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-entry">
-                    <div class="entry-title">Full Stack Developer</div>
-                    <div class="entry-company">StartupHub Inc.</div>
-                    <div class="entry-header">
-                        <div class="entry-location">San Francisco, CA</div>
-                        <div class="entry-date">June 2020 - December 2021</div>
-                    </div>
-                    <div class="entry-description">
-                        <ul>
-                            <li>Developed and deployed <strong>10+ responsive web applications</strong> using React, Node.js, Express, and PostgreSQL for diverse client projects across healthcare, fintech, and e-commerce sectors</li>
-                            <li>Designed and implemented <strong>RESTful APIs</strong> consumed by mobile and web applications, handling 100,000+ daily requests with 99.9% uptime</li>
-                            <li>Integrated third-party services including <strong>Stripe payment processing, SendGrid email automation, and Twilio SMS notifications</strong>, enhancing application functionality</li>
-                            <li>Established <strong>CI/CD pipelines</strong> using GitHub Actions and Docker, reducing deployment time from 2 hours to 20 minutes (83% improvement)</li>
-                            <li>Optimized frontend performance through code splitting, lazy loading, and image optimization, improving page load times by 50%</li>
-                            <li>Implemented comprehensive error logging and monitoring using Sentry, reducing mean time to resolution (MTTR) by 40%</li>
-                            <li>Participated in agile ceremonies including sprint planning, daily standups, and retrospectives, consistently delivering features on schedule</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-entry">
-                    <div class="entry-title">Junior Software Developer</div>
-                    <div class="entry-company">Digital Solutions Ltd.</div>
-                    <div class="entry-header">
-                        <div class="entry-location">San Francisco, CA</div>
-                        <div class="entry-date">August 2019 - May 2020</div>
-                    </div>
-                    <div class="entry-description">
-                        <ul>
-                            <li>Developed and maintained web applications using <strong>Django, Vue.js, and PostgreSQL</strong> for internal business operations and client-facing portals</li>
-                            <li>Resolved 150+ bug reports and implemented new features based on user feedback, improving overall application stability</li>
-                            <li>Wrote unit tests using pytest and achieved 75% test coverage, ensuring code reliability and maintainability</li>
-                            <li>Collaborated with senior developers in code reviews, learning best practices in software architecture and design patterns</li>
-                            <li>Created comprehensive technical documentation for APIs and system workflows, facilitating knowledge transfer and onboarding</li>
-                            <li>Participated in database schema design and optimization, improving query performance by 30%</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Key Projects -->
-            <section id="projects">
-                <h2>Key Projects</h2>
-                
-                <div class="project-entry">
-                    <div class="project-title">Enterprise E-Commerce Platform</div>
-                    <div class="project-tech">Technologies: React, TypeScript, Node.js, Express, MongoDB, Redis, Stripe API, AWS S3</div>
-                    <div class="project-description">
-                        Architected and developed a comprehensive e-commerce platform featuring user authentication, product catalog with advanced search and filtering, shopping cart with persistent state, secure payment processing, and admin dashboard. Implemented real-time inventory management system and order tracking functionality. Platform handles 10,000+ concurrent users with 99.9% uptime and processes $500K+ in monthly transactions.
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">→ Live Demo</a>
-                        <a href="#" class="project-link">→ GitHub Repository</a>
-                    </div>
-                </div>
-
-                <div class="project-entry">
-                    <div class="project-title">Real-Time Collaborative Task Management System</div>
-                    <div class="project-tech">Technologies: Next.js, TypeScript, PostgreSQL, Prisma, Socket.io, Docker, AWS EC2</div>
-                    <div class="project-description">
-                        Built a collaborative project management application with real-time synchronization, drag-and-drop kanban boards, team collaboration features, time tracking, and analytics dashboard. Implemented WebSocket connections for instant updates across multiple clients. System supports 500+ concurrent users and manages 50,000+ tasks across 100+ organizations with sub-second update latency.
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">→ Live Demo</a>
-                        <a href="#" class="project-link">→ GitHub Repository</a>
-                    </div>
-                </div>
-
-                <div class="project-entry">
-                    <div class="project-title">Data Visualization Dashboard</div>
-                    <div class="project-tech">Technologies: React, D3.js, Chart.js, Python, FastAPI, PostgreSQL</div>
-                    <div class="project-description">
-                        Developed an interactive analytics dashboard for visualizing complex datasets with real-time updates. Features include customizable charts, data filtering, export functionality, and responsive design. Implemented efficient data aggregation on backend to handle datasets with 1M+ records. Dashboard serves 5,000+ daily users and displays insights from 10+ data sources.
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">→ Live Demo</a>
-                        <a href="#" class="project-link">→ GitHub Repository</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Education -->
-            <section id="education">
-                <h2>Education</h2>
-                
-                <div class="education-entry">
-                    <div class="degree-title">Bachelor of Science in Computer Science</div>
-                    <div class="institution">University of Technology, San Francisco, CA</div>
-                    <div class="education-details">Graduated: May 2019 | GPA: 3.8/4.0 | Honors Graduate</div>
-                    <div class="education-description">
-                        <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Database Management Systems, Software Engineering, Web Development, Operating Systems, Computer Networks, Object-Oriented Programming, Artificial Intelligence, Cloud Computing
-                    </div>
-                </div>
-            </section>
-
-            <!-- Certifications -->
-            <section id="certifications">
-                <h2>Professional Certifications</h2>
-                <div class="cert-list">
-                    <div class="cert-item">
-                        <div class="cert-title">AWS Certified Developer - Associate</div>
-                        <div class="cert-issuer">Amazon Web Services (AWS)</div>
-                        <div class="cert-date">Issued: March 2023 | Valid through: March 2026</div>
-                    </div>
-                    <div class="cert-item">
-                        <div class="cert-title">MongoDB Certified Developer Associate</div>
-                        <div class="cert-issuer">MongoDB University</div>
-                        <div class="cert-date">Issued: July 2022</div>
-                    </div>
-                    <div class="cert-item">
-                        <div class="cert-title">Professional Scrum Master I (PSM I)</div>
-                        <div class="cert-issuer">Scrum.org</div>
-                        <div class="cert-date">Issued: November 2021</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Additional Information -->
-            <section id="additional">
-                <h2>Additional Information</h2>
-                <ul class="achievements-list">
-                    <li><strong>Open Source Contributions:</strong> Active contributor to React and Node.js community projects with 500+ GitHub stars across repositories</li>
-                    <li><strong>Technical Writing:</strong> Published 15+ technical articles on Medium and Dev.to covering JavaScript, React patterns, and system design, reaching 50,000+ readers</li>
-                    <li><strong>Languages:</strong> English (Native), Spanish (Conversational)</li>
-                </ul>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer-links">
-                <a href="mailto:alex.johnson@email.com" class="footer-link">Email</a>
-                <a href="https://linkedin.com/in/alexjohnson" class="footer-link">LinkedIn</a>
-                <a href="https://github.com/alexjohnson" class="footer-link">GitHub</a>
-                <a href="https://alexjohnson.dev" class="footer-link">Portfolio</a>
             </div>
-            <p class="footer-text">© 2025 Alex Johnson. All Rights Reserved.</p>
-        </footer>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-24 fade-in-section">
+            <h2 class="section-title">Core Skills</h2>
+            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">RAG</span>
+                <span class="tag">Knowledge Graph (neo4j)</span>
+                <span class="tag">LLM Development</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Langchain</span>
+                <span class="tag">Vector Stores (ChromaDB)</span>
+                <span class="tag">Langgraph</span>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-24 fade-in-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Project 1 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/e0f2fe/0c4a6e?text=AI+Reviewer" alt="AI Reviewer Agent Project Image" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">AI Reviewer Agent</h3>
+                        <p class="text-gray-600 mb-6 h-24">An AI-powered agent for quality control, comparing documents against project specs to ensure compliance.</p>
+                        <div class="flex items-center gap-4">
+                             <button class="btn btn-primary w-full" onclick="openModal('modal1')"><i class="fas fa-info-circle mr-2"></i>View Details</button>
+                             <a href="#" target="_blank" class="btn btn-secondary w-full"><i class="fab fa-github mr-2"></i>View Repo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/e0f2fe/0c4a6e?text=Cost+Estimator" alt="AI BOQ Cost Estimator Project Image" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">AI BOQ Cost Estimator</h3>
+                        <p class="text-gray-600 mb-6 h-24">An AI application helping cost engineers estimate Bill of Quantities (BOQs) based on historical pricing data.</p>
+                         <div class="flex items-center gap-4">
+                             <button class="btn btn-primary w-full" onclick="openModal('modal2')"><i class="fas fa-info-circle mr-2"></i>View Details</button>
+                             <a href="#" target="_blank" class="btn btn-secondary w-full"><i class="fab fa-github mr-2"></i>View Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Courses -->
+        <section id="education" class="mb-24 fade-in-section">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Education -->
+                <div class="card p-8 text-center">
+                    <i class="fas fa-graduation-cap text-4xl text-sky-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Education</h3>
+                    <p class="text-xl font-semibold">Helwan University</p>
+                    <p class="text-gray-500 mb-2">2013 - 2018</p>
+                    <p class="text-gray-700">Bachelor's degree in Civil Engineering</p>
+                    <p class="text-green-600 font-medium mt-1">Project Grade: Excellent</p>
+                </div>
+                <!-- Courses -->
+                <div class="card p-8 text-center">
+                    <i class="fas fa-certificate text-4xl text-sky-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Courses</h3>
+                    <ul class="text-left list-disc list-inside space-y-2 text-gray-700">
+                        <li>Data Engineering Specialization [Coursera, Deeplearning.ai, AWS]</li>
+                        <li>Machine Learning Specialization by Andrew Ng (in-progress)</li>
+                        <li>AI Agents in Langgraph [Deeplearning.ai]</li>
+                        <li>Python [Self-learning]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Languages Section -->
+        <section id="languages" class="mt-16 text-center fade-in-section">
+            <h2 class="section-title">Languages</h2>
+            <div class="flex justify-center items-center gap-12">
+                <div class="text-center">
+                    <p class="text-xl font-semibold">English</p>
+                    <p class="text-gray-600">Very Good</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-xl font-semibold">Russian</p>
+                    <p class="text-gray-600">Beginner</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="absolute top-4 right-6 text-3xl text-gray-400 hover:text-gray-700 cursor-pointer" onclick="closeModal('modal1')">&times;</span>
+            <h3 class="text-3xl font-bold mb-4 text-gray-800">AI Reviewer Agent</h3>
+            <p class="text-gray-600 mb-6">This AI agent acts as a quality control assistant. It meticulously compares datasheets and material/equipment quality documents against the project's specifications and BOQ requirements. The agent provides a complete understanding of the project's requirements, returns a compliance score, and offers initial recommendations.</p>
+            <h4 class="font-semibold text-lg mb-3">Skills & Technologies Used:</h4>
+            <div class="flex flex-wrap gap-3 mb-8">
+                <span class="tag">Python</span><span class="tag">Langchain</span><span class="tag">Data Analysis</span><span class="tag">RAG</span><span class="tag">ChromaDB</span><span class="tag">Langgraph</span><span class="tag">Structured Output</span>
+            </div>
+            <a href="#" target="_blank" class="btn btn-secondary w-full"><i class="fab fa-github mr-2"></i>View Repository</a>
+        </div>
     </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="absolute top-4 right-6 text-3xl text-gray-400 hover:text-gray-700 cursor-pointer" onclick="closeModal('modal2')">&times;</span>
+            <h3 class="text-3xl font-bold mb-4 text-gray-800">AI BOQ Cost Estimator</h3>
+            <p class="text-gray-600 mb-6">This AI application assists cost control engineers in estimating new Bill of Quantities (BOQs). It leverages the company's historical price data to provide accurate and efficient cost estimations, streamlining the bidding and budgeting process.</p>
+            <h4 class="font-semibold text-lg mb-3">Skills & Technologies Used:</h4>
+            <div class="flex flex-wrap gap-3 mb-8">
+                <span class="tag">Python</span><span class="tag">Langchain</span><span class="tag">Data Analysis</span><span class="tag">RAG</span><span class="tag">ChromaDB</span><span class="tag">Function Calling</span><span class="tag">Structured Output</span>
+            </div>
+             <a href="#" target="_blank" class="btn btn-secondary w-full"><i class="fab fa-github mr-2"></i>View Repository</a>
+        </div>
+    </div>
+
+    <footer class="text-center py-8 mt-24 bg-gray-800 text-gray-400">
+        <p>&copy; 2024 Ahmad Abd El-Azeem. Designed with passion.</p>
+    </footer>
+
+    <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = "block";
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal if clicked outside of the content area
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target.id);
+            }
+        });
+        
+        // Close modal if escape key is pressed
+        window.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    if(modal.style.display === 'block') closeModal(modal.id);
+                });
+            }
+        });
+
+        // Scroll animations
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+    </script>
 </body>
 </html>
+
