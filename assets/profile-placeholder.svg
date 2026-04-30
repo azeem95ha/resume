@@ -1,0 +1,21 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" rx="56" fill="#0F172A"/>
+  <rect x="24" y="24" width="752" height="952" rx="40" fill="url(#bg)"/>
+  <circle cx="400" cy="330" r="128" fill="#E2E8F0" fill-opacity="0.18"/>
+  <path d="M188 774C188 654.706 284.706 558 404 558H396C515.294 558 612 654.706 612 774V820H188V774Z" fill="#E2E8F0" fill-opacity="0.18"/>
+  <circle cx="400" cy="330" r="116" stroke="#67E8F9" stroke-opacity="0.6" stroke-width="4" stroke-dasharray="14 14"/>
+  <path d="M400 160V112" stroke="#818CF8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M400 548V500" stroke="#818CF8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M570 330H618" stroke="#818CF8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M182 330H230" stroke="#818CF8" stroke-width="8" stroke-linecap="round"/>
+  <rect x="144" y="860" width="512" height="64" rx="20" fill="#020617" fill-opacity="0.45"/>
+  <text x="400" y="898" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="28" font-weight="700">Replace with your photo</text>
+  <text x="400" y="942" text-anchor="middle" fill="#94A3B8" font-family="Arial, sans-serif" font-size="20">assets/profile-placeholder.svg</text>
+  <defs>
+    <linearGradient id="bg" x1="92" y1="64" x2="708" y2="936" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#312E81"/>
+      <stop offset="0.5" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#164E63"/>
+    </linearGradient>
+  </defs>
+</svg>
